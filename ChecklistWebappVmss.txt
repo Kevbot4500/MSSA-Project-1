@@ -1,0 +1,16 @@
+1 Create web app
+2 Configure a deployment slot (that contains application code)
+3 Swap - The staging deployment slot to production
+4 Configure web app load balancing - Create a clone app (in different region)
+5 Enable load balancing by using Traffic Manager
+6 Configure Virtual Networks - 
+6a Create vnet for a web server tier
+6b Create vnet for an application server tier
+6c Configure vnet PEERING between vnets
+7 Create VM1 in an availability set
+7 Create VM2 in an availability set
+8 Install IIS on VMs (Install-WindowsFeature -Name Web-Server -IncludeManagementTools)
+9 Deploy Public Load Balancer
+10 Enable VMSS - Virtual Machine Scale set (w Custom Scaling Policy)
+11 Verify VMSS
+
