@@ -12,4 +12,6 @@ New-AzResourceGroupDeployment `
 
 
 # Vnet template works
-# load balancer, not yet.  Depends on - Vnet which exists
+
+# load balancer, not yet.  Depends on - ONLY references whats in Template.  
+# Can delete DependsOn, and won't break template, just put lower in template.  May have to run template twice to work.

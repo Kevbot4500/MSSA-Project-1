@@ -1,12 +1,17 @@
 {
     "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
-    "parameters": {},
+    "parameters": {
+        "loadBalancerName": {
+            "type": "string",
+            "defaultValue": "loadBalancerInternal1"
+        }
+    },
     "functions": [],
     "variables": {},
     "resources": [
         {
-            "name": "loadBalancerInternal1",
+            "name": "loadBalancerName",
             "type": "Microsoft.Network/loadBalancers",
             "apiVersion": "2020-11-01",
             "location": "[resourceGroup().location]",
