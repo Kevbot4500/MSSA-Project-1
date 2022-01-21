@@ -6,12 +6,12 @@
     "variables": {},
     "resources": [
         {
-            "name": "Tier2",
+            "name": "virtualNetwork1",
             "type": "Microsoft.Network/virtualNetworks",
             "apiVersion": "2020-11-01",
             "location": "[resourceGroup().location]",
             "tags": {
-                "displayName": "Tier2"
+                "displayName": "virtualNetwork1"
             },
             "properties": {
                 "addressSpace": {
