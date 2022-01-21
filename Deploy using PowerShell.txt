@@ -7,8 +7,9 @@ New-AzResourceGroup -Name Example -Location eastus   # to delete, Remove-AzResou
 
 # 
 New-AzResourceGroupDeployment `
-    -ResourceGroupName System.String ` # (System.String) if Resource Group not yet created
+    -ResourceGroupName Example `
     -TemplateUri #use RAW http from GitHub
 
 
-    # If connecting through Windows Terminal
+# Vnet template works
+# load balancer, not yet

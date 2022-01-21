@@ -6,7 +6,7 @@
     "variables": {},
     "resources": [
         {
-            "name": "MSSATier2loadBalancerInternal",
+            "name": "loadBalancerInternal1",
             "type": "Microsoft.Network/loadBalancers",
             "apiVersion": "2020-11-01",
             "location": "[resourceGroup().location]",
@@ -36,10 +36,10 @@
                         "name": "LBRule1",
                         "properties": {
                             "frontendIPConfiguration": {
-                                "id": "[resourceId('Microsoft.Network/loadBalancers/frontendMSSATier2IPConfigurations', '', 'loadBalancerFrontEnd1')]"
+                                "id": "[resourceId('Microsoft.Network/loadBalancers/frontendIPConfigurations', 'loadBalancerInternal1', 'loadBalancerFrontEnd1')]"
                             },
                             "backendAddressPool": {
-                                "id": "[resourceId('Microsoft.Network/loadBalancers/bacMSSATier2kendAddressPools', '', 'loadBalancerBackEndPool1')]"
+                                "id": "[resourceId('Microsoft.Network/loadBalancers/backendAddressPools', 'loadBalancerInternal1', 'loadBalancerBackEndPool1')]"
                             },
                             "protocol": "Tcp",
                             "frontendPort": 80,
@@ -47,7 +47,7 @@
                             "enableFloatingIP": false,
                             "idleTimeoutInMinutes": 5,
                             "probe": {
-                                "id": "[resourceId('Microsoft.Network/loadMSSATier2Balancers/probes', '', 'tcpProbe1')]"
+                                "id": "[resourceId('Microsoft.Network/loadBalancers/probes', 'loadBalancerInternal1', 'tcpProbe1')]"
                             }
                         }
                     }
