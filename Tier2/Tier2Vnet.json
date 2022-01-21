@@ -6,12 +6,12 @@
     "variables": {},
     "resources": [
         {
-            "name": "MSSATier2",
+            "name": "Tier2",
             "type": "Microsoft.Network/virtualNetworks",
             "apiVersion": "2020-11-01",
             "location": "[resourceGroup().location]",
             "tags": {
-                "displayName": "MSSATier2"
+                "displayName": "Tier2"
             },
             "properties": {
                 "addressSpace": {
