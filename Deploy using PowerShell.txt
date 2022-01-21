@@ -12,4 +12,4 @@ New-AzResourceGroupDeployment `
 
 
 # Vnet template works
-# load balancer, not yet
+# load balancer, not yet.  Depends on - Vnet which exists
